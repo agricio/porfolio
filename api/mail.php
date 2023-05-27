@@ -1,8 +1,8 @@
 <?php
-$name = utf8_encode($_POST['name']);
-$email = utf8_encode($_POST['email']);
-$type = utf8_encode($_POST['project']);
-$message = utf8_encode($_POST['message']);
+$name = ($_POST['name']);
+$email = ($_POST['email']);
+$type = ($_POST['project']);
+$message = ($_POST['message']);
 
 require 'PHPMailer/PHPMailerAutoload.php';
 
