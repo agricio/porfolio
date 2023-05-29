@@ -1,4 +1,14 @@
 <?php
+
+use Mailtrap\Config;
+use Mailtrap\EmailHeader\CategoryHeader;
+use Mailtrap\EmailHeader\CustomVariableHeader;
+use Mailtrap\Helper\ResponseHelper;
+use Mailtrap\MailtrapClient;
+use Symfony\Component\Mime\Address;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Header\UnstructuredHeader;
+
 $name = ($_POST['name']);
 $email = ($_POST['email']);
 $type = ($_POST['project']);
