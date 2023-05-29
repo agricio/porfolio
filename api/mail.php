@@ -20,7 +20,7 @@ $mail->Password = "Snowbreese00";
 
 //Message Configuration
 
-$mail->setForm($mail->Username, "Seu Nome"); // Remetente
+$mail->setForm($email); // Remetente
 $mail->addAddress('nerovigiann@gmail.com'); //Destinatario
 $mail->Subject = "Fale Conosco"; // Assunto do e-mail
 
