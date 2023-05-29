@@ -11,12 +11,12 @@ $mail->isSMTP();
 
 //set e-mail server
 
-$mail->Host = "smtp.gmail.com";
-$mail->Port = "587";
+$mail->Host = "smtp.live.com";
+$mail->Port = "465";
 $mail->SMTPSecure = "tls";
 $mail->SMTPAuth = "true";
 $mail->Username = "nerovigiann@gmail.com";
-$mail->Password = "suasenha";
+$mail->Password = "Snowbreese00";
 
 //Message Configuration
 
