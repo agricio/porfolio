@@ -22,7 +22,7 @@ $message = ($_POST['message']);
 
 $email = (new Email())
     ->from(new Address($email, 'Mailtrap Test'))
-    ->to(new Address('nerovigiann@hotmail.com', 'Jon'))
+    ->to(new Address('nerovigiann@gmail.com', 'Jon'))
     ->subject('Best practices of building HTML emails')
     ->text('Hey! Learn the best practices of building HTML emails and play with ready-to-go templates. Mailtrap’s Guide on How to Build HTML Email is live on our blog')
     ->html(
