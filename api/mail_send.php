@@ -23,12 +23,12 @@ try {
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('nerovigiann@hotmail.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-    $mail->addAddress('ellen@example.com');               //Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
-    $mail->addCC('cc@example.com');
-    $mail->addBCC('bcc@example.com');
+    $mail->setFrom('nerovigiann@gmail.com', 'Mailer');
+    $mail->addAddress('nerovigiann@hotmail.com', 'Joe User');     //Add a recipient
+    //$mail->addAddress('ellen@example.com');               //Name is optional
+    $mail->addReplyTo('nerovigiann@gmail.com', 'Information');
+   // $mail->addCC('cc@example.com');
+   // $mail->addBCC('bcc@example.com');
 
     //Attachments
     //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
