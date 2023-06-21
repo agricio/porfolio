@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //ambient variables
-$parsed = parse_ini_file('.env', true);
+$parsed = parse_ini_file('./keys.ini', true);
 
 $_ENV[ENVIRONMENT] = $parsed['ENVIRONMENT'];
 
