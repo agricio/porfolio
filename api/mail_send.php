@@ -47,12 +47,17 @@ try {
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = ($_POST['project']);
 
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $Project = $_POST['project'];
+    $text = $_POST['message'];
+
     $body = "<h3>Mensagem de Cliente ou contato vinda do portfolio</h3>
             <br>
-            Nome $_POST['name']<br>
-            E-mail: $_POST['email']<br>
-            Projeto: $_POST['project']<br>
-            Mensagem: $_POST['message']<br>"
+            Nome $name<br>
+            E-mail: $email<br>
+            Projeto: $Project<br>
+            Mensagem: $text<br>"
     ;
 
     $mail->Body    = $body;
