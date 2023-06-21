@@ -21,17 +21,17 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                           //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = $_ENV['EMAIL'];                     //SMTP username
+    $mail->Username   = $_ENV['SERVER'];                     //SMTP username
     $mail->Password   = $_ENV['PASSWORD'];                              //SMTP password
     //$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->client_email = $_ENV['EMAIL'];
+    $mail->client_email = $_ENV['SERVER'];
     $mail->setFrom($_ENV['EMAIL'], ($_POST['name']));
     $mail->addAddress($_ENV['EMAIL'], 'Agricio');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
