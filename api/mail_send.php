@@ -6,13 +6,12 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //ambient variables
-$parsed = parse_ini_file('/keys.ini', true);
+require_once('helpers/Environment.php');
 
-$_ENV[ENVIRONMENT] = $parsed['ENVIRONMENT'];
+use helpers\Environment;
 
-foreach ($parsed[$parsed['ENVIRONMENT']] as $key => $value) {
-    $_ENV[$key] = $value;
-}
+Environment::load();
+
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
