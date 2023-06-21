@@ -46,17 +46,28 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = ($_POST['project']);
-    $mail->Body    = ($_POST['message']);
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    $body = "<h3>Mensagem de Cliente ou contato vinda do portfolio</h3>
+            <br>
+            Nome $_POST['name']<br>
+            E-mail: $_POST['email']<br>
+            Projeto: $_POST['project']<br>
+            Mensagem: $_POST['message']<br>"
+    ;
+
+    $mail->Body    = $body;
+   // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
-    //"<script>alert('Thank you for the message. We will contact you shortly.');</script>
+    //"
 
-    //<script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/#contact'</script>
+    //
      echo 
-        "<script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/#home'</script>";
+        "<script>alert('Thank you for the message. We will contact you shortly.');</script>
+        <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/#home'</script>";
     } catch (Exception $e) {
         echo "<script>alert('Sorry! Please try again.');</script>
+              <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/#contact'</script>
         "; 
     }
 
