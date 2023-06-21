@@ -20,7 +20,7 @@ class Environment
     {
         $path = dirname(__DIR__);
 
-        $parsed = parse_ini_file($path . '/keys.ini', true);
+        $parsed = parse_ini_file($path . '../../../api/keys.ini', true);
 
         $_ENV['ENVIRONMENT'] = $parsed['ENVIRONMENT'];
 
