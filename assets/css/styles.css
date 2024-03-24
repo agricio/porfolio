@@ -751,6 +751,11 @@ img {
     transition: .3s;
 }
 
+.services__content__img {
+    width: 166px;
+
+}
+
 .services__content:hover {
     box-shadow: 0 4px 8px rgba(0,0,0, .30)
 }
@@ -1172,7 +1177,7 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 320px) {
     .container {
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
@@ -1199,12 +1204,20 @@ img {
     .skills__title {
         font-size: var(--normal-font-size);
     }
+
+    .skills__titles {
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
     .qualification__data {
         gap: .5rem;
     }
 
     .services__container {
-        grid-template-columns: max-content;
+        
         justify-content: center;
     }
 
@@ -1238,10 +1251,7 @@ img {
     .testimonial__description {
         text-align: center;
     }
-}
 
-/* For medium devices */
-@media screen and (min-width: 568px) {
     .home__content {
         grid-template-columns: max-content 1fr 1fr;
     }
@@ -1267,8 +1277,10 @@ img {
         grid-template-columns: .6fr;
         justify-content: center;
     }
+}
 
-    @media screen and (min-width: 768px) {
+/* For medium devices */
+@media screen and (min-width: 768px) {
         .container {
             margin-left: auto;
             margin-right: auto;
@@ -1363,9 +1375,18 @@ img {
             grid-template-columns: repeat(3, 218px);
             justify-content: center;
         }
+
         .services__icon {
             font-size: 2rem;
         }
+
+        .skills__titles {
+            display: flex;
+            flex-direction: row;
+            justify-content:flex-start;
+            margin-bottom: var(--mb-0-5)
+        }
+
         .services__modal-content {
             width: 450px;
         }
@@ -1421,8 +1442,8 @@ img {
             margin-top: 1.5rem;
         }
 
-    }
 }
+
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
