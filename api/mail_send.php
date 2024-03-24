@@ -66,6 +66,21 @@ try {
     $mail->send();
     //"
 
+    // clear addresses of all types
+    $mail->ClearAllRecipients(); //Limpar todos os que destinatiarios: TO, CC, BCC
+
+    //Titulo do e-mail que será enviado
+    $mail->Subject  =   "OUTRO ASSUNTO";
+
+    //E-mail para a qual o e-mail será enviado
+    $mail->AddAddress("OUTRO-EMAIL@gmail.com");
+
+    //Conteúdo do e-mail
+    $mail->Body = "OUTRO TEXTO.";
+    $mail->AltBody = $mail->Body;
+
+    $enviadoCliente = $mail->Send();
+
     //
      echo 
         "<script>alert('Thank you for the message. We will contact you shortly.');</script>
