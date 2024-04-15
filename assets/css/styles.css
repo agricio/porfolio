@@ -859,7 +859,6 @@ img {
 
 .portfolio__content {
     padding: 0 1.5rem;
-    
 }
 
 .portfolio__img {
@@ -903,6 +902,10 @@ img {
     
 }
 
+.portfolio__button {
+    margin-right: 0.8rem;
+}
+
 .portfolio__button:hover .button__icon {
     transform: translateX(.25rem);
 }
@@ -927,6 +930,7 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: -2.5rem;
 }
+
 
 .swiper-pagination-bullet-active {
     background-color: var(--first-color);
@@ -1366,9 +1370,7 @@ img {
         .about__description {
             text-align: initial;
         }
-        .about__info {
-            justify-content: space-between;
-        }
+
         .about__buttons {
             justify-content: initial;
         }
@@ -1408,6 +1410,12 @@ img {
         .portfolio__content {
             align-items: center;
         }
+
+        .portfolio_ {
+            margin: auto;
+            width: 850px;
+        }
+        
         .project {
             width: 100%;
         }

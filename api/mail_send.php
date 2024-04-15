@@ -12,6 +12,14 @@ use helpers\Environment;
 
 Environment::load();
 
+session_start(); // Start the session
+$_SESSION['name'] = $_POST['name'];
+$_SESSION['email'] = $_POST['email'];
+$_SESSION['project'] = $_POST['project'];
+
+header("mail_Template.php");
+
+
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
@@ -52,16 +60,14 @@ try {
     $Project = $_POST['project'];
     $text = $_POST['message'];
 
-    $body = "<h3>Mensagem de Cliente ou contato vinda do portfolio</h3>
-            <br>
-            Nome $name<br>
-            E-mail: $email<br>
-            Projeto: $Project<br>
-            Mensagem: $text<br>"
-    ;
+    // Start output buffering
+    ob_start();
+    include 'email_template.php';
+    $emailContent = ob_get_clean();
 
-    $mail->Body    = $body;
-   // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    
+   $mail->Body = $emailContent;
+   $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
     //"
