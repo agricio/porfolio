@@ -64,9 +64,11 @@ try {
     //include 'email_Template.php';
    $emailTemplate = file_get_contents("helpers/mail_Template.html");
    $emailTemplate = str_replace('{{name}}', $name, $emailTemplate);
+   $emailTemplate = str_replace('{{email}}', $email, $emailTemplate);
+   $emailTemplate = str_replace('{{project}}', $Project, $emailTemplate);
 
 
-   $mail->Body = $emailContent;
+   $mail->Body = $emailTemplate;
    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
