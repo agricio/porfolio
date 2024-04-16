@@ -1,6 +1,8 @@
 
 <?php
 
+include_once ("api/mail_send.php");
+
 $emailContent = <<<HTML
 <!DOCTYPE html>
 <html lang="en">
