@@ -12,12 +12,13 @@ use helpers\Environment;
 
 Environment::load();
 
-session_start(); // Start the session
-$_SESSION['name'] = $_POST['name'];
-$_SESSION['email'] = $_POST['email'];
-$_SESSION['project'] = $_POST['project'];
 
-header("Location: helpers/mail_Template.php");
+$t_name = $_POST['name'];
+$t_email = $_POST['email'];
+$t_project = $_POST['project'];
+
+//header("Location: helpers/mail_Template.php");
+header("Location: helpers/mail_Template.php?name=" . urlencode($t_name) . "&age=" . $t_email . "&city=" . urlencode($t_project));
 
 include_once ("helpers/mail_Template.php");
 
