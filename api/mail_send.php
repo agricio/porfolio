@@ -56,16 +56,16 @@ try {
 
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $Project = $_POST['project'];
+    $project = $_POST['project'];
     $text = $_POST['message'];
 
     // Start output buffering
     //ob_start();
     //include 'email_Template.php';
    $emailTemplate = $emailContent;
-   $emailTemplate = str_replace('{{name}}', $name, '{{email}}', $email, '{{project}}', $Project, $emailTemplate);
-   //$emailTemplate = str_replace('{{email}}', $email, $emailTemplate);
-   //$emailTemplate = str_replace('{{project}}', $Project, $emailTemplate);
+   $emailTemplate = str_replace('{{name}}', $emailTemplate);
+   $emailTemplate = str_replace('{{email}}', $email, $emailTemplate);
+   $emailTemplate = str_replace('{{project}}', $project, $emailTemplate);
 
 
    $mail->Body = $emailTemplate;
