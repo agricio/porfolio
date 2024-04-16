@@ -92,7 +92,7 @@ try {
     //
      echo 
         "<script>alert('Thank you for the message. We will contact you shortly.');</script>
-        <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/#home'</script>";
+        <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/'</script>";
     } catch (Exception $e) {
         echo "<script>alert('Sorry! Please try again.');</script>
               <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/#contact'</script>
