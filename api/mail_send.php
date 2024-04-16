@@ -17,7 +17,7 @@ $_SESSION['name'] = $_POST['name'];
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['project'] = $_POST['project'];
 
-header("helpers/mail_Template.php");
+header("Location: helpers/mail_Template.php");
 
 include_once ("helpers/mail_Template.php");
 
