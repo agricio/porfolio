@@ -6,8 +6,7 @@ $name = $_SESSION['name'];
 $email = $_SESSION['email'];
 $project = $_SESSION['project'];
 
-?>
-
+$emailContent = <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +18,9 @@ $project = $_SESSION['project'];
     <p>The price was <?php echo $project; ?>.</p>
 </body>
 </html>
+HTML;
+
+?>
 
 
 

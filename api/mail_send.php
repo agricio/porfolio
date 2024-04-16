@@ -19,6 +19,8 @@ $_SESSION['project'] = $_POST['project'];
 
 header("helpers/mail_Template.php");
 
+include_once ("helpers/mail_Template.php");
+
 
 
 //Load Composer's autoloader
@@ -66,7 +68,7 @@ try {
    // $emailContent = ob_get_clean();
 
 
-   $mail->Body = file_get_contents("helpers/mail_Template.php");
+   $mail->Body = $emailContent;
    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
