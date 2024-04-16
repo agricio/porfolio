@@ -63,7 +63,7 @@ try {
     //ob_start();
     //include 'email_Template.php';
    $emailTemplate = $emailContent;
-   $emailTemplate = str_replace('{{name}}', $emailTemplate);
+   $emailTemplate = str_replace('{{name}}', $name,  $emailTemplate);
    $emailTemplate = str_replace('{{email}}', $email, $emailTemplate);
    $emailTemplate = str_replace('{{project}}', $project, $emailTemplate);
 
