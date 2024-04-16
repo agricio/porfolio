@@ -17,7 +17,7 @@ $_SESSION['name'] = $_POST['name'];
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['project'] = $_POST['project'];
 
-header("mail_Template.php");
+header("helpers/mail_Template.php");
 
 
 
@@ -61,12 +61,12 @@ try {
     $text = $_POST['message'];
 
     // Start output buffering
-    ob_start();
-    include 'email_Template.php';
-    $emailContent = ob_get_clean();
+    //ob_start();
+    //include 'email_Template.php';
+   // $emailContent = ob_get_clean();
 
 
-   $mail->Body = $emailContent;
+   $mail->Body = file_get_contents("helpers/mail_Template.php");
    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
