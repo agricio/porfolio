@@ -13,14 +13,10 @@ use helpers\Environment;
 Environment::load();
 
 
-$t_name = $_POST['name'];
-$t_email = $_POST['email'];
-$t_project = $_POST['project'];
-
 //header("Location: helpers/mail_Template.php");
 //header("helpers/mail_Template.php?name=" . urlencode($t_name) . "&age=" . $t_email . "&city=" . urlencode($t_project));
 
-include_once ("helpers/mail_Template.php");
+//include_once ("helpers/mail_Template.php");
 
 
 
@@ -66,7 +62,8 @@ try {
     // Start output buffering
     //ob_start();
     //include 'email_Template.php';
-   // $emailContent = ob_get_clean();
+   $emailTemplate = file_get_contents("helpers/mail_Template.html");
+   $emailTemplate = str_replace('{{name}}', $name, $emailTemplate);
 
 
    $mail->Body = $emailContent;
