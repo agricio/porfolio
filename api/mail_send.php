@@ -62,10 +62,10 @@ try {
 
     // Start output buffering
     ob_start();
-    include 'email_template.php';
+    include 'email_Template.php';
     $emailContent = ob_get_clean();
 
-    
+
    $mail->Body = $emailContent;
    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
