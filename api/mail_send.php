@@ -59,13 +59,15 @@ try {
     $project = $_POST['project'];
     $text = $_POST['message'];
 
-    // Start output buffering
-    //ob_start();
-    //include 'email_Template.php';
-   $emailTemplate = $emailContent;
-   $emailTemplate = str_replace('{{name}}', $name,  $emailTemplate);
-   $emailTemplate = str_replace('{{email}}', $email, $emailTemplate);
-   $emailTemplate = str_replace('{{project}}', $project, $emailTemplate);
+    $search = ['{{name}}', '{{email}}', '{{project}}'];
+    $replace = [$name, $email, $project];
+
+
+    $emailTemplate = $emailContent;
+    $emailTemplate = str_replace($search, $replace,  $emailTemplate);
+    //$emailTemplate = str_replace('{{name}}', $name,  $emailTemplate);
+    //$emailTemplate = str_replace('{{email}}', $email, $emailTemplate);
+    //$emailTemplate = str_replace('{{project}}', $project, $emailTemplate);
 
 
    $mail->Body = $emailTemplate;
