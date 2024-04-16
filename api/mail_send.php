@@ -8,17 +8,12 @@ use PHPMailer\PHPMailer\Exception;
 //ambient variables
 require_once('helpers/Environment.php');
 
+//email html template
+include_once ("helpers/mail_Template.php");
+
 use helpers\Environment;
 
 Environment::load();
-
-
-//header("Location: helpers/mail_Template.php");
-//header("helpers/mail_Template.php?name=" . urlencode($t_name) . "&age=" . $t_email . "&city=" . urlencode($t_project));
-
-include_once ("helpers/mail_Template.php");
-
-
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
@@ -65,13 +60,9 @@ try {
 
     $emailTemplate = $emailContent;
     $emailTemplate = str_replace($search, $replace,  $emailTemplate);
-    //$emailTemplate = str_replace('{{name}}', $name,  $emailTemplate);
-    //$emailTemplate = str_replace('{{email}}', $email, $emailTemplate);
-    //$emailTemplate = str_replace('{{project}}', $project, $emailTemplate);
-
-
-   $mail->Body = $emailTemplate;
-   $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+   
+    $mail->Body = $emailTemplate;
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
     //"
