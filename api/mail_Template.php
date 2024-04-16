@@ -1,12 +1,3 @@
-<?php
-
-session_start(); // Start the session
-$name = $_SESSION['name'];
-$email = $_SESSION['email'];
-$project = $_SESSION['project'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
