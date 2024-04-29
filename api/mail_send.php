@@ -57,27 +57,24 @@ try {
     $search = ['{{name}}', '{{email}}', '{{project}}'];
     $replace = [$name, $email, $project];
 
-
     $emailTemplate = $emailContent;
     $emailTemplate = str_replace($search, $replace,  $emailTemplate);
    
     $mail->Body = $emailTemplate;
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
+    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     $mail->send();
-    //"
-
+ 
     // clear addresses of all types
     $mail->ClearAllRecipients(); //Limpar todos os que destinatiarios: TO, CC, BCC
 
     //Titulo do e-mail que será enviado
-    $mail->Subject  =   "OUTRO ASSUNTO";
+    $mail->Subject = "Possivel cliente";
 
     //E-mail para a qual o e-mail será enviado
-    $mail->AddAddress("OUTRO-EMAIL@gmail.com");
+    $mail->AddAddress("nerovigiann@hotmail.com");
 
     //Conteúdo do e-mail
-    $mail->Body = "OUTRO TEXTO.";
+    $mail->Body = "Possivel cliente: '$name' com projeto '$project' quer ser feito dessa forma: '$text'";
     $mail->AltBody = $mail->Body;
 
     $enviadoCliente = $mail->Send();
