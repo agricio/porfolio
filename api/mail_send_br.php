@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 require_once('helpers/Environment.php');
 
 //email html template
-include_once ("helpers/mail_Template.php");
+include_once ("helpers/mail_Template_br.php");
 
 use helpers\Environment;
 

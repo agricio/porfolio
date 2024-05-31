@@ -690,6 +690,11 @@ img {
     right: 30px;
 }
 
+.qualification__data_div {
+    text-align: right;
+}
+
+
 .qualification__title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
@@ -1501,6 +1506,11 @@ img {
         width: 460px; 
     }
     .contact__inputs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact__container,
+    .footer__container {
         grid-template-columns: repeat(2, 1fr);
     }
 }

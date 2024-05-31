@@ -91,9 +91,9 @@ $emailContent = <<<HTML
           <tr>
             <td style="width: 596px; vertical-align: top; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 40px;" width="596">
 
-              <h1 style="font-size: 25px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">Thank you {{name}} </h1>
+              <h1 style="font-size: 25px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">Ogrigado {{name}} </h1>
 
-              <p style="font-size: 18px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;">I hope we can just take your {{project}} idea and turn them into businesses. I will get back to you {{email}} as soon as possible, thank you!.</p>              
+              <p style="font-size: 18px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;">Espero que possamos pegar o seu {{project}} ideia e transformá-las em um negócio. Irei entrar em contato pelo {{email}} assim que possível, Obrigado!.</p>              
 
               <!-- Start button (You can change the background colour by the hex code below) -->
               <a href="https://porfolio-khaki.vercel.app/" target="_blank" style="background-color: #2178cf; font-size: 20px; line-height: 22px; font-family: 'Helvetica', Arial, sans-serif; font-weight: normal; text-decoration: none; padding: 12px 15px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;">
