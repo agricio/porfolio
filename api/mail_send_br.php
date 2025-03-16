@@ -82,10 +82,10 @@ try {
 
     //
      echo 
-        "<script>alert('Thank you for the message. We will contact you shortly.');</script>
+        "<script>alert('Obrigado por entrar em contato. Irei responder o mais rapido possível.');</script>
         <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/'</script>";
     } catch (Exception $e) {
-        echo "<script>alert('Sorry! Please try again.');</script>
+        echo "<script>alert('Desculpe! Aconteceu um erro, tente mais tarde.');</script>
               <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/#contact'</script>
         "; 
     }
