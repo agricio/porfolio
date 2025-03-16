@@ -101,7 +101,7 @@ $emailContent = <<<HTML
                   <i style="letter-spacing: 25px; mso-font-width: -100%; mso-text-raise: 30pt;">&nbsp;</i>
                 <![endif]-->
 
-                  <span style="mso-text-raise: 15pt; color: #ffffff;">Go to Portfolio</span>
+                  <span style="mso-text-raise: 15pt; color: #ffffff;">Voltar ao Portfolio</span>
                   <!--[if mso]>
                   <i style="letter-spacing: 25px; mso-font-width: -100%;">&nbsp;</i>
                 <![endif]-->
